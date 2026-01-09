@@ -44,6 +44,19 @@ public class Board {
 		piece.position = position; // redefinir atributo da peça
 	}
 	
+	public Piece removePiece(Position position) {
+		if (!positionExists(position)) { // defensive programming
+			throw new BoardException("Position not on the board");
+		}
+		if (piece(position) == null) {
+			return null;
+		}
+		Piece aux = piece(position); // retorna um Piece com a position específica
+		aux.position = null; // atribuir null na position de Piece
+		pieces[position.getRow()][position.getColumn()] = null; // atribuir null na position da matriz de Board
+		return aux;
+	}
+	
 	public boolean positionExists(int row, int column) {
 		return row >= 0 && row < rows && column >= 0 && column < columns;
 	}
