@@ -17,6 +17,10 @@ public abstract class ChessPiece extends Piece { // peça de xadrez
 		return color;
 	}
 	
+	public ChessPosition getChessPosition() {
+		return ChessPosition.fromPosition(position); // método estático recebendo atributo herdado da superclasse
+	}
+	
 	protected boolean isThereOpponentPiece(Position position) {
 		ChessPiece p = (ChessPiece) getBoard().piece(position);
 		return p != null && p.getColor() != color; // cor da peça diferente da peça que está na posição específica
