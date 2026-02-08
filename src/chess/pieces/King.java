@@ -15,4 +15,10 @@ public class King extends ChessPiece { // rei
 		return "K";
 	}
 
+	@Override
+	public boolean[][] possibleMoves() {
+		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()]; // inicia com todas as posições como false
+		return mat;
+	}
+
 }
