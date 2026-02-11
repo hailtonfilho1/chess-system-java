@@ -20,6 +20,7 @@ public abstract class Piece {
 		return possibleMoves()[position.getRow()][position.getColumn()]; // hook method
 	}
 	
+	// encontrar pelo menos um movimento possível, encontrado significa também que a peça não está presa
 	public boolean isThereAnyPossibleMove() {
 		boolean[][] mat = possibleMoves();
 		for (int i = 0; i < mat.length; i++) {
