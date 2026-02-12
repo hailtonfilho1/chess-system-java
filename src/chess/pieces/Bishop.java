@@ -17,7 +17,7 @@ public class Bishop extends ChessPiece { // bispo
 	}
 
 	@Override
-	public boolean[][] possibleMoves() {
+	public boolean[][] possibleMoves() { // semelhante a Rook
 		boolean[][] mat = new boolean[getBoard().getRows()][getBoard().getColumns()];
 		
 		Position p = new Position(0, 0);
