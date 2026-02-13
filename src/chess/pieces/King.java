@@ -8,7 +8,7 @@ import chess.Color;
 
 public class King extends ChessPiece { // rei
 
-	private ChessMatch chessMatch; // acesso a partida para implementar jogada especial Castling
+	private ChessMatch chessMatch; // acesso a partida para implementar #specialmove castling
 	
 	public King(Board board, Color color, ChessMatch chessMatch) {
 		super(board, color);
