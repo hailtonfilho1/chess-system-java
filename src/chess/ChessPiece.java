@@ -21,10 +21,10 @@ public abstract class ChessPiece extends Piece { // peça de xadrez
 		return moveCount;
 	}
 	
-	public void increaseMoveCount() {
+	protected void increaseMoveCount() {
 		moveCount++;
 	}
-	public void decreaseMoveCount() {
+	protected void decreaseMoveCount() {
 		moveCount--;
 	}
 	
